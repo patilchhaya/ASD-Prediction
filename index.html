@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASD Predictor</title>
+</head>
+<body>
+    <h1>ASD Predictor</h1>
+    {% if person %}
+       <p>{{result}}</p>
+    {% endif %}
+
+    <form action="/predict" method="post">
+        <label for="Age">Age:</label>
+        <input type="text" id="Age" name="Age"><br><br>
+
+        <label for="Gender">Gender:</label>
+        <input type="text" id="Gender" name="Gender"><br><br>
+
+        <label for="Ethnicity">Ethnicity:</label>
+        <input type="text" id="Ethnicity" name="Ethnicity"><br><br>
+
+        <label for="Family_History">Family History:</label>
+        <input type="text" id="Family_History" name="Family_History"><br><br>
+
+        <label for="Developmental_Milestones">Developmental Milestones:</label>
+        <input type="text" id="Developmental_Milestones" name="Developmental_Milestones"><br><br>
+
+        <label for="Social_Interactions_Score">Social Interactions Score:</label>
+        <input type="text" id="Social_Interactions_Score" name="Social_Interactions_Score"><br><br>
+
+        <label for="Communication_Score">Communication Score:</label>
+        <input type="text" id="Communication_Score" name="Communication_Score"><br><br>
+
+        <label for="Repetitive_Behaviors_Score">Repetitive Behaviors Score:</label>
+        <input type="text" id="Repetitive_Behaviors_Score" name="Repetitive_Behaviors_Score"><br><br>
+
+        <label for="Hyperactivity_Score">Hyperactivity Score:</label>
+        <input type="text" id="Hyperactivity_Score" name="Hyperactivity_Score"><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+    </form>
+</body>
+</html>
